@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run_name: linear_clm_to_mlm
+output_dir: runs/linear_clm_to_mlm
+# reverse direction control
+schedule: {name: linear, p_start: 0.0625, p_end: 0.9375, p_min: 0.05, p_max: 0.95}

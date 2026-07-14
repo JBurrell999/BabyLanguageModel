@@ -1,0 +1,4 @@
+extends: ../base.yaml
+run_name: step_midswitch
+output_dir: runs/step_midswitch
+schedule: {name: step, boundaries: [0.5], values: [0.9375, 0.0625]}

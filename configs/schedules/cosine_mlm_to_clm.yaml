@@ -1,0 +1,4 @@
+extends: ../base.yaml
+run_name: cosine_mlm_to_clm
+output_dir: runs/cosine_mlm_to_clm
+schedule: {name: cosine, p_start: 0.9375, p_end: 0.0625, p_min: 0.05, p_max: 0.95}

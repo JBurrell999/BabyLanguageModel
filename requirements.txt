@@ -1,0 +1,6 @@
+torch>=2.3
+tokenizers>=0.19
+pyyaml
+pytest
+wandb            # optional; CSV fallback always on
+tqdm

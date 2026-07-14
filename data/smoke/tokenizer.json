@@ -1,0 +1,593 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<unk>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "</s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<mask>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<sp0>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<sp1>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 7,
+      "content": "<sp2>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 8,
+      "content": "<sp3>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 9,
+      "content": "<sp4>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 10,
+      "content": "<sp5>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 11,
+      "content": "<sp6>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 12,
+      "content": "<sp7>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 13,
+      "content": "<sp8>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 14,
+      "content": "<sp9>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 15,
+      "content": "<sp10>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "<unk>",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<pad>": 0,
+      "<unk>": 1,
+      "<s>": 2,
+      "</s>": 3,
+      "<mask>": 4,
+      "<sp0>": 5,
+      "<sp1>": 6,
+      "<sp2>": 7,
+      "<sp3>": 8,
+      "<sp4>": 9,
+      "<sp5>": 10,
+      "<sp6>": 11,
+      "<sp7>": 12,
+      "<sp8>": 13,
+      "<sp9>": 14,
+      "<sp10>": 15,
+      "a": 16,
+      "b": 17,
+      "c": 18,
+      "d": 19,
+      "e": 20,
+      "f": 21,
+      "g": 22,
+      "h": 23,
+      "i": 24,
+      "l": 25,
+      "m": 26,
+      "n": 27,
+      "o": 28,
+      "p": 29,
+      "r": 30,
+      "s": 31,
+      "t": 32,
+      "u": 33,
+      "v": 34,
+      "w": 35,
+      "y": 36,
+      "pr": 37,
+      "on": 38,
+      "pre": 39,
+      "ns": 40,
+      "ion": 41,
+      "at": 42,
+      "he": 43,
+      "om": 44,
+      "ct": 45,
+      "ction": 46,
+      "an": 47,
+      "the": 48,
+      "er": 49,
+      "ev": 50,
+      "ery": 51,
+      "every": 52,
+      "do": 53,
+      "ru": 54,
+      "dog": 55,
+      "runs": 56,
+      "ce": 57,
+      "de": 58,
+      "prece": 59,
+      "des": 60,
+      "precedes": 61,
+      "com": 62,
+      "prehe": 63,
+      "nsion": 64,
+      "comprehe": 65,
+      "comprehension": 66,
+      "ay": 67,
+      "day": 68,
+      "fr": 69,
+      "from": 70,
+      "mat": 71,
+      "di": 72,
+      "predi": 73,
+      "prediction": 74,
+      "and": 75,
+      "sat": 76,
+      "lo": 77,
+      "ly": 78,
+      "slo": 79,
+      "wly": 80,
+      "slowly": 81,
+      "in": 82,
+      "pu": 83,
+      "inpu": 84,
+      "input": 85,
+      "bi": 86,
+      "big": 87,
+      "as": 88,
+      "fas": 89,
+      "fast": 90,
+      "ag": 91,
+      "gu": 92,
+      "lan": 93,
+      "age": 94,
+      "guage": 95,
+      "language": 96,
+      "du": 97,
+      "odu": 98,
+      "produ": 99,
+      "production": 100,
+      "cat": 101,
+      "ch": 102,
+      "il": 103,
+      "chil": 104,
+      "child": 105,
+      "ar": 106,
+      "ear": 107,
+      "lear": 108,
+      "learns": 109,
+      "al": 110,
+      "mal": 111,
+      "smal": 112,
+      "small": 113
+    },
+    "merges": [
+      [
+        "p",
+        "r"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "pr",
+        "e"
+      ],
+      [
+        "n",
+        "s"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "h",
+        "e"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "ct",
+        "ion"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "t",
+        "he"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "e",
+        "v"
+      ],
+      [
+        "er",
+        "y"
+      ],
+      [
+        "ev",
+        "ery"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "r",
+        "u"
+      ],
+      [
+        "do",
+        "g"
+      ],
+      [
+        "ru",
+        "ns"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "pre",
+        "ce"
+      ],
+      [
+        "de",
+        "s"
+      ],
+      [
+        "prece",
+        "des"
+      ],
+      [
+        "c",
+        "om"
+      ],
+      [
+        "pre",
+        "he"
+      ],
+      [
+        "ns",
+        "ion"
+      ],
+      [
+        "com",
+        "prehe"
+      ],
+      [
+        "comprehe",
+        "nsion"
+      ],
+      [
+        "a",
+        "y"
+      ],
+      [
+        "d",
+        "ay"
+      ],
+      [
+        "f",
+        "r"
+      ],
+      [
+        "fr",
+        "om"
+      ],
+      [
+        "m",
+        "at"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "pre",
+        "di"
+      ],
+      [
+        "predi",
+        "ction"
+      ],
+      [
+        "an",
+        "d"
+      ],
+      [
+        "s",
+        "at"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "l",
+        "y"
+      ],
+      [
+        "s",
+        "lo"
+      ],
+      [
+        "w",
+        "ly"
+      ],
+      [
+        "slo",
+        "wly"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "p",
+        "u"
+      ],
+      [
+        "in",
+        "pu"
+      ],
+      [
+        "inpu",
+        "t"
+      ],
+      [
+        "b",
+        "i"
+      ],
+      [
+        "bi",
+        "g"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "f",
+        "as"
+      ],
+      [
+        "fas",
+        "t"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "l",
+        "an"
+      ],
+      [
+        "ag",
+        "e"
+      ],
+      [
+        "gu",
+        "age"
+      ],
+      [
+        "lan",
+        "guage"
+      ],
+      [
+        "d",
+        "u"
+      ],
+      [
+        "o",
+        "du"
+      ],
+      [
+        "pr",
+        "odu"
+      ],
+      [
+        "produ",
+        "ction"
+      ],
+      [
+        "c",
+        "at"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "i",
+        "l"
+      ],
+      [
+        "ch",
+        "il"
+      ],
+      [
+        "chil",
+        "d"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "e",
+        "ar"
+      ],
+      [
+        "l",
+        "ear"
+      ],
+      [
+        "lear",
+        "ns"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "s",
+        "mal"
+      ],
+      [
+        "smal",
+        "l"
+      ]
+    ]
+  }
+}

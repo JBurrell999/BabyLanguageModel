@@ -1,0 +1,4 @@
+extends: ../base.yaml
+run_name: fixed_1to1
+output_dir: runs/fixed_1to1
+schedule: {name: fixed, p: 0.5}

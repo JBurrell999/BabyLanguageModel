@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run_name: adaptive_mask_linear
+output_dir: runs/adaptive_mask_linear
+schedule: {name: linear, p_start: 0.9375, p_end: 0.0625, p_min: 0.05, p_max: 0.95}
+adaptive_masking: {enabled: true, strength: 0.5, beta: 0.99}

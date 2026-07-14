@@ -1,0 +1,51 @@
+# Base config: shared settings. Schedule/optimizer/masking variants extend this.
+run_name: base
+output_dir: runs/base
+seed: 42
+device: cuda
+
+# --- data (fill in after Phase 0 corpus prep) ---
+train_path: data/processed/train_100m.bin        # torch.save'd list of token tensors
+tokenizer_path: data/processed/tokenizer.json
+model_config: configs/model_base.json
+
+# --- exposure accounting: MEASURE these on your corpus, do not guess ---
+exposure:
+  corpus_words: 100000000
+  words_per_token: 0.75        # total_corpus_words / total_corpus_tokens
+  max_epochs: 10               # pin against the 2026 CfP wording!
+
+# --- training ---
+max_steps: 15625               # ~= 10 epochs at global batch 32768 x seq 128 / 100M words: recompute for your setup
+local_batch_size: 256
+accumulate_steps: 8
+seq_length: 128
+warmup_steps: 250
+max_gradient: 2.0
+z_loss_weight: 1.0e-4
+ema_decay: 0.999
+mixed_precision: true
+num_workers: 4
+log_every: 20
+save_every_steps: 0            # word-milestone checkpoints always on
+
+ratio_mode: composition        # composition | schedule | fixed:<x>
+
+optimizer:
+  name: lamb                   # lamb (reference) | adamw | muon
+  lr: 1.0e-2
+  weight_decay: 0.1
+
+adaptive_masking:
+  enabled: false
+  strength: 0.5
+  beta: 0.99
+
+schedule:
+  name: fixed
+  p: 0.9375                    # 15/16 = GPT-BERT default
+
+wandb:
+  enabled: true
+  project: babylm2026-strict
+  mode: offline

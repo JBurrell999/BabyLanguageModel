@@ -1,0 +1,14 @@
+extends: ../base.yaml
+run_name: adaptive_loss
+output_dir: runs/adaptive_loss
+# need-based: batch share flows to the objective doing worse vs its own history
+schedule:
+  name: loss_adaptive
+  temperature: 0.05
+  beta_fast: 0.98
+  beta_slow: 0.999
+  update_every: 10
+  warmup_steps: 200
+  p_warmup: 0.5
+  p_min: 0.05
+  p_max: 0.95

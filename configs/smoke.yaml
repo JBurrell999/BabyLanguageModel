@@ -1,0 +1,22 @@
+run_name: smoke
+output_dir: runs/smoke
+seed: 42
+device: cpu
+train_path: data/smoke/train.bin
+tokenizer_path: data/smoke/tokenizer.json
+model_config: configs/model_smoke.json
+n_special_tokens: 16
+exposure: {corpus_words: 28090, words_per_token: 1.0, max_epochs: 10}
+max_steps: 40
+local_batch_size: 8
+accumulate_steps: 2
+seq_length: 64
+warmup_steps: 5
+mixed_precision: false
+num_workers: 0
+log_every: 5
+ratio_mode: composition
+optimizer: {name: muon, muon_lr: 0.01, adamw_lr: 1.0e-3, weight_decay: 0.01}
+adaptive_masking: {enabled: true, strength: 0.5, beta: 0.99}
+schedule: {name: loss_adaptive, warmup_steps: 5, update_every: 2, temperature: 0.05, p_warmup: 0.5, p_min: 0.05, p_max: 0.95}
+wandb: {enabled: false}

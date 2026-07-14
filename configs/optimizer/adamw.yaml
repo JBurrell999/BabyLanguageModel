@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run_name: adamw_linear
+output_dir: runs/adamw_linear
+schedule: {name: linear, p_start: 0.9375, p_end: 0.0625, p_min: 0.05, p_max: 0.95}
+optimizer: {name: adamw, lr: 1.0e-2, weight_decay: 0.1}

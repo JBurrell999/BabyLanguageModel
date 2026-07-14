@@ -1,0 +1,12 @@
+extends: ../base.yaml
+run_name: adaptive_slope
+output_dir: runs/adaptive_slope
+# progress-based: batch share flows to the objective improving fastest
+schedule:
+  name: slope_adaptive
+  temperature: 0.02
+  update_every: 10
+  warmup_steps: 200
+  p_warmup: 0.5
+  p_min: 0.05
+  p_max: 0.95
